@@ -269,6 +269,37 @@ function setupDeferredMenu(){
   }
 }
 
+
+
+function setupMobileNavigation(){
+  const header=document.querySelector('.public-topbar');
+  const toggle=document.querySelector('.mobile-menu-toggle');
+  const nav=document.querySelector('#primaryNav');
+  if(!header || !toggle || !nav) return;
+
+  const close=()=>{
+    header.classList.remove('is-mobile-menu-open');
+    toggle.setAttribute('aria-expanded','false');
+  };
+  const open=()=>{
+    header.classList.add('is-mobile-menu-open');
+    toggle.setAttribute('aria-expanded','true');
+  };
+
+  toggle.addEventListener('click',()=>{
+    header.classList.contains('is-mobile-menu-open') ? close() : open();
+  });
+
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',close));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape') close();
+  });
+  document.addEventListener('click',event=>{
+    if(!header.contains(event.target)) close();
+  });
+}
+
+setupMobileNavigation();
 setupAdminLinks();
 setupQuoteStepper();
 setupLazyVideos();

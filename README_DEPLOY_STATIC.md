@@ -24,3 +24,11 @@ cmbanqueteria.cl
 - Correo público actualizado a `claudiamendezbanqueteria@gmail.com`.
 - La sección ubicación usa la imagen vertical `assets/terraza.jpeg` y un mapa horizontal inferior.
 - CM Experience permanece oculto.
+
+## Actualización 2026-08-04 · navegación móvil y visual vertical
+
+- Navegación móvil convertida a botón Menú con despliegue accesible (`aria-expanded`, cierre por clic en enlace, clic fuera o Escape).
+- Acceso interno queda visible junto al logo en móvil.
+- Hero y montajes usan mejor las imágenes verticales disponibles (`assets/banqueteria.jpeg`, `assets/terraza.jpeg`).
+- Secciones ajustadas para ocupar una pantalla promedio en escritorio y evitar superposiciones en móvil.
+- Horario público unificado: lunes a viernes, 12:00 a 15:00 hrs.
