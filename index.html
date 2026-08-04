@@ -18,7 +18,7 @@
     body.public-site header,body.public-site main,body.public-site footer{display:block;visibility:visible;opacity:1;}
     body.public-site .public-topbar{background:#fffaf4;}
   </style>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=20260803-location-email-mobile-v32" />
 </head>
 <body class="public-site public-v2">
   <header class="topbar public-topbar">
@@ -33,7 +33,7 @@
         <a href="#cotiza">Cotiza</a>
         <a href="#como-llegar">Ubicación</a>
       </nav>
-      <a class="btn btn-secondary nav-admin" href="/admin.html" data-admin-link>Acceso interno</a>
+      <a class="btn btn-secondary nav-admin" href="https://admin.cmbanqueteria.cl/admin.html" data-admin-link>Acceso interno</a>
     </div>
   </header>
 
@@ -209,7 +209,7 @@
                 <button class="btn btn-primary quote-submit" type="submit">Enviar por WhatsApp</button>
                 <a class="btn btn-gold" href="https://wa.me/56987741182?text=Hola%20CM%20Banqueter%C3%ADa%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">WhatsApp directo</a>
               </div>
-              <p class="form-note">contacto@cmbanqueteria.cl · +56 9 8774 1182</p>
+              <p class="form-note">claudiamendezbanqueteria@gmail.com · +56 9 8774 1182</p>
             </section>
           </form>
           <aside class="quote-photo-card quote-image-card">
@@ -220,9 +220,9 @@
       </div>
     </section>
 
-    <section class="section visit-section" id="como-llegar">
-      <div class="container visit-grid location-layout">
-        <div>
+    <section class="section visit-section visit-section-v32" id="como-llegar">
+      <div class="container location-v32">
+        <div class="location-v32-copy">
           <div class="kicker">Cómo llegar</div>
           <h2>Costanera Norte 1012, Laja</h2>
           <p class="muted">CM está ubicado frente al entorno de Laguna La Señoraza. Para almuerzos, consulta el menú del día; para banquetería y reservas especiales, coordina previamente.</p>
@@ -231,21 +231,21 @@
             <a class="btn btn-secondary" href="tel:+56987741182">Llamar</a>
             <a class="btn btn-gold" href="https://wa.me/56987741182?text=Hola%20CM%2C%20quiero%20consultar%20por%20la%20ubicaci%C3%B3n%20y%20disponibilidad." target="_blank" rel="noopener">WhatsApp</a>
           </div>
-          <aside class="info-card location-info">
+          <aside class="info-card location-info location-info-v32">
             <strong>Información rápida</strong>
-            <span>Restaurant: lunes a viernes, 12:00 a 15:30 hrs.</span>
+            <span>Restaurant: lunes a viernes, 12:00 a 15:00 hrs.</span>
             <span>Banquetería: cotización previa según fecha y número de personas.</span>
             <span>Reservas especiales: consulta previa según disponibilidad del local.</span>
           </aside>
         </div>
-        <div class="location-media-pair">
-          <aside class="location-image-card">
-            <img src="/assets/web/R8_restaurant_terraza_laguna_web.jpg" alt="Terraza de CM frente al entorno de Laguna La Señoraza">
-            <div class="location-image-caption"><span>CM Banquetería</span><strong>Entorno y ubicación frente a Laguna La Señoraza.</strong></div>
-          </aside>
-          <div class="map-stack location-map-card">
-            <iframe title="Mapa de CM Banquetería en Laja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Costanera%20Norte%201012%20Laja%20Chile&output=embed"></iframe>
-          </div>
+
+        <figure class="location-terrace-v32">
+          <img src="/assets/terraza.jpeg" alt="Terraza de CM frente al entorno de Laguna La Señoraza">
+          <figcaption><span>CM Banquetería</span><strong>Terraza y entorno frente a Laguna La Señoraza</strong></figcaption>
+        </figure>
+
+        <div class="location-map-wide-v32">
+          <iframe title="Mapa de CM Banquetería en Laja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Costanera%20Norte%201012%20Laja%20Chile&output=embed"></iframe>
         </div>
       </div>
     </section>
@@ -259,7 +259,7 @@
   <footer class="footer public-footer footer-clean">
     <div class="container footer-clean-inner">
       <div class="footer-clean-brand">
-        <img src="/assets/logo-blanco.png" alt="Logo CM Banquetería" class="footer-logo-clean">
+        <img src="/assets/logo-blanco.png" alt="Logo CM Banquetería" class="footer-logo-clean footer-logo-transparent">
         <div>
           <h3>CM Banquetería y Restaurant</h3>
           <p>Restaurant familiar y banquetería en Costanera Norte 1012, Laja</p>
@@ -274,9 +274,9 @@
             <span class="material-symbols-rounded" aria-hidden="true">call</span>
             <span><strong>+56 9 8774 1182</strong><small>Teléfono y WhatsApp</small></span>
           </a>
-          <a class="footer-clean-item" href="mailto:contacto@cmbanqueteria.cl?subject=Consulta%20desde%20cmbanqueteria.cl">
+          <a class="footer-clean-item" href="mailto:claudiamendezbanqueteria@gmail.com?subject=Consulta%20desde%20cmbanqueteria.cl">
             <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span><strong>contacto@cmbanqueteria.cl</strong><small>Consultas y cotizaciones</small></span>
+            <span><strong>claudiamendezbanqueteria@gmail.com</strong><small>Consultas y cotizaciones</small></span>
           </a>
           <a class="footer-clean-item" href="https://www.instagram.com/cm.banqueteria_/" target="_blank" rel="noopener">
             <span class="material-symbols-rounded" aria-hidden="true">photo_camera</span>
@@ -290,8 +290,8 @@
       </div>
     </div>
   </footer>
-  <script src="/config.js?v=20260721-mobile-fixed-v30"></script>
-  <script src="/menu-graphic.js?v=20260721-footer-mobile-v31"></script>
-  <script src="/public.js?v=20260721-footer-mobile-v31"></script>
+  <script src="/config.js?v=20260803-location-email-mobile-v32"></script>
+  <script src="/menu-graphic.js?v=20260803-location-email-mobile-v32"></script>
+  <script src="/public.js?v=20260803-location-email-mobile-v32"></script>
 </body>
 </html>

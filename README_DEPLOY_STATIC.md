@@ -17,3 +17,10 @@ El archivo `CNAME` ya contiene:
 ```txt
 cmbanqueteria.cl
 ```
+
+## Actualización 2026-08-03
+
+- `config.js` apunta a `https://admin.cmbanqueteria.cl` para usar Render solo como backend/panel interno.
+- Correo público actualizado a `claudiamendezbanqueteria@gmail.com`.
+- La sección ubicación usa la imagen vertical `assets/terraza.jpeg` y un mapa horizontal inferior.
+- CM Experience permanece oculto.

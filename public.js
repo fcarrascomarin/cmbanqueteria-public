@@ -1,4 +1,5 @@
 const CM_WHATSAPP = '56987741182';
+const CM_CONTACT_EMAIL = 'claudiamendezbanqueteria@gmail.com';
 const CM_API_BASE = (window.CM_API_BASE || '').replace(/\/$/, '');
 const CM_ADMIN_URL = window.CM_ADMIN_URL || (CM_API_BASE ? `${CM_API_BASE}/admin.html` : '/admin.html');
 
@@ -17,6 +18,11 @@ function setupAdminLinks(){
 
 function cmWhatsappUrl(message){
   return `https://wa.me/${CM_WHATSAPP}?text=${encodeURIComponent(message)}`;
+}
+
+function cmEmailUrl(payload){
+  const subject = `Cotización web CM - ${payload.clientName || 'consulta'}`;
+  return `mailto:${CM_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(quoteMessage(payload))}`;
 }
 
 async function loadTodayMenu(){
@@ -85,7 +91,7 @@ document.querySelector('#quoteForm')?.addEventListener('submit',async e=>{
     const res=await fetch(cmApiUrl('/api/public/quotes'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     if(res.ok){
       form.reset();
-      alert('Solicitud preparada en WhatsApp y registrada correctamente. CM Banquetería se contactará contigo.');
+      alert('Solicitud preparada en WhatsApp, registrada en el sistema interno y enviada al canal de correo configurado. CM Banquetería se contactará contigo.');
     }else{
       if(!whatsappWindow) alert('No se pudo abrir WhatsApp automáticamente. Usa el botón WhatsApp directo.');
     }
