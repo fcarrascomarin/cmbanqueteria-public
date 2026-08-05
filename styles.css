@@ -565,3 +565,83 @@ main section[id]{scroll-margin-top:calc(var(--nav-h) + 14px)}
   .location-terrace-v40{min-height:430px;height:430px;border-radius:22px}
   .location-map-wide-v40,.location-map-wide-v40 iframe{min-height:230px}
 }
+
+
+/* ===== Ajustes visuales CM v41 · restaurant, banquetería y hero ===== */
+/* Hero: contraste reforzado sin ocultar las fotografías. */
+.public-hero .hero-copy{
+  position:relative;
+  z-index:2;
+  padding:clamp(22px,3vw,34px);
+  border-radius:28px;
+  background:linear-gradient(110deg,rgba(40,4,4,.72) 0%,rgba(52,7,6,.48) 72%,rgba(52,7,6,.12) 100%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 22px 55px rgba(22,2,2,.28);
+  backdrop-filter:blur(2px);
+}
+.public-hero .kicker{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  margin-bottom:16px;
+  padding:7px 12px;
+  border-radius:999px;
+  color:#fff5ec;
+  background:rgba(201,45,82,.32);
+  border:1px solid rgba(255,255,255,.22);
+  text-shadow:0 2px 10px rgba(30,0,0,.55);
+}
+.public-hero h1{
+  color:#fffaf4;
+  text-shadow:0 4px 22px rgba(20,0,0,.72);
+}
+.public-hero .lead{
+  color:#fffaf4;
+  font-weight:700;
+  text-shadow:0 3px 14px rgba(20,0,0,.62);
+}
+.public-hero .hero-secondary{
+  background:#fffaf4;
+  color:var(--vino);
+  border-color:rgba(255,255,255,.72);
+}
+
+/* Restaurant: un único botón principal, con la misma jerarquía visual de Banquetería. */
+.restaurant-actions{margin-top:2px}
+.restaurant-actions .btn{min-width:132px}
+
+/* Banquetería: ambas imágenes llenan completamente su tarjeta, sin franjas de fondo vino. */
+.banqueteria-montage.two-up{
+  align-items:stretch;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.banqueteria-montage figure,
+.banqueteria-montage figure:nth-child(2){
+  height:clamp(410px,52vh,540px);
+  min-height:0;
+  align-self:stretch;
+}
+.banqueteria-montage figure img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.banqueteria-montage figure:first-child img{object-position:center 42%}
+.banqueteria-montage figure:nth-child(2) img{object-position:center}
+
+@media(max-width:980px){
+  .public-hero .hero-copy{padding:24px}
+  .banqueteria-montage figure,
+  .banqueteria-montage figure:nth-child(2){height:390px}
+}
+@media(max-width:720px){
+  .public-hero .hero-copy{padding:20px;border-radius:22px}
+  .public-hero .kicker{white-space:normal;line-height:1.25}
+  .restaurant-actions .btn{width:100%;min-width:0}
+  .banqueteria-montage.two-up{grid-template-columns:1fr}
+  .banqueteria-montage figure,
+  .banqueteria-montage figure:nth-child(2){height:310px;min-height:310px}
+}
