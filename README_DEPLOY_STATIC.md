@@ -32,3 +32,12 @@ cmbanqueteria.cl
 - Hero y montajes usan mejor las imágenes verticales disponibles (`assets/banqueteria.jpeg`, `assets/terraza.jpeg`).
 - Secciones ajustadas para ocupar una pantalla promedio en escritorio y evitar superposiciones en móvil.
 - Horario público unificado: lunes a viernes, 12:00 a 15:00 hrs.
+
+## Actualización 2026-08-04 · balance visual v34
+
+- Navegación móvil mantiene menú desplegable y acceso interno visible.
+- Se redujo texto explicativo para priorizar imágenes y lectura rápida.
+- Hero con menos contenedor/caja y más protagonismo de fotografías verticales.
+- Sección Cómo llegar corregida para que el mapa quede dentro de la sección y no se solape con el footer.
+- La fotografía vertical de terraza se luce como pieza principal de ubicación.
+- Footer compacto, sin invadir la sección anterior.
