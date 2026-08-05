@@ -74,26 +74,22 @@
     </section>
 
     <section class="section service-section restaurant-section" id="restaurant">
-      <div class="container service-layout service-layout-montage restaurant-layout-v8">
+      <div class="container service-layout restaurant-layout-v42">
         <div class="service-copy">
           <div class="kicker">CM Restaurant</div>
           <h2>Almuerzos del día</h2>
           <p class="service-lead">Menú casero, atención cercana y ubicación frente a la laguna.</p>
-          <div class="feature-list compact">
-            <div><strong>Horario</strong><span>Lunes a viernes, 12:00 a 15:30 hrs.</span></div>
-            <div><strong>Menú</strong><span>Opciones diarias según producción.</span></div>
-            <div><strong>Ubicación</strong><span>Costanera Norte 1012</span></div>
+          <div class="feature-list compact icon-list restaurant-feature-list">
+            <div><i class="material-symbols-rounded" aria-hidden="true">schedule</i><strong>Horario</strong><span>Lunes a viernes, 12:00 a 15:30 hrs.</span></div>
+            <div><i class="material-symbols-rounded" aria-hidden="true">menu_book</i><strong>Menú</strong><span>Opciones diarias según producción.</span></div>
+            <div><i class="material-symbols-rounded" aria-hidden="true">location_on</i><strong>Ubicación</strong><span>Costanera Norte 1012.</span></div>
           </div>
           <div class="service-actions restaurant-actions">
-            <a class="btn btn-primary" href="#menu-del-dia">Menú</a>
+            <a class="btn btn-primary" href="#menu-del-dia">Ver menú</a>
           </div>
         </div>
-        <div class="service-side-stack restaurant-side-stack">
-          <div class="service-montage restaurant-montage two-up" aria-label="Montaje visual de CM Restaurant">
-            <figure><img src="/assets/web/R5_restaurant_salon_calido_hero.jpg" alt="Salón de CM Restaurant preparado para atención diaria"><figcaption>Salón interior</figcaption></figure>
-            <figure><img src="/assets/terraza.jpeg" alt="Terraza de CM Restaurant frente al entorno de Laguna La Señoraza"><figcaption>Terraza exterior</figcaption></figure>
-          </div>
-          <div class="menu-card-public compact-menu-card inline-menu-card" id="menu-del-dia"><p class="muted">Cargando menú...</p></div>
+        <div class="menu-card-public restaurant-menu-panel" id="menu-del-dia" aria-live="polite">
+          <p class="muted">Cargando menú...</p>
         </div>
       </div>
     </section>
