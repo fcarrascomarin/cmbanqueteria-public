@@ -41,3 +41,11 @@ cmbanqueteria.cl
 - Sección Cómo llegar corregida para que el mapa quede dentro de la sección y no se solape con el footer.
 - La fotografía vertical de terraza se luce como pieza principal de ubicación.
 - Footer compacto, sin invadir la sección anterior.
+
+## Entrega de traspaso v40 · 05-08-2026
+
+- La barra de navegación queda fija durante el desplazamiento.
+- Las anclas consideran la altura de la barra para que cada sección comience visible.
+- Las dos fotografías de Restaurant usan cajas equivalentes y recorte proporcional.
+- En Cómo llegar, la fotografía comienza alineada con el texto posterior al título; el mapa y la fotografía terminan a la misma altura en escritorio.
+- En móvil, ubicación y fotografías se apilan sin sobreposición.
