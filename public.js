@@ -32,11 +32,12 @@ async function loadTodayMenu(){
     const res=await fetch(cmApiUrl('/api/public/menu/today'), {credentials: CM_API_BASE ? 'omit' : 'same-origin'}),data=await res.json();
     if(!data.menu){
       box.innerHTML=`
-        <div class="menu-empty">
-          <span class="badge">CM Restaurant</span>
-          <h3>Consulta el menú disponible de hoy</h3>
-          <p class="muted">El menú del día pertenece a CM Restaurant. Cuando no esté publicado en la web, puedes consultar directamente por WhatsApp.</p>
-          <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar menú por WhatsApp</a>
+        <div class="menu-waiting">
+          <img class="menu-waiting-image" src="/assets/menu-espera.jpg" alt="Menú del día en preparación; se publicará aquí cuando esté disponible">
+          <div class="menu-waiting-actions">
+            <span>Menú en preparación</span>
+            <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
         </div>`;
       return;
     }
@@ -48,10 +49,12 @@ async function loadTodayMenu(){
     picture.append(source,image);box.innerHTML='<span class="badge green">Menú publicado para hoy</span>';box.appendChild(picture);
   }catch(e){
     box.innerHTML=`
-      <div class="menu-empty">
-        <h3>Menú no disponible en este momento</h3>
-        <p class="muted">No se pudo cargar el menú del día. Puedes consultar disponibilidad por WhatsApp.</p>
-        <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="menu-waiting">
+        <img class="menu-waiting-image" src="/assets/menu-espera.jpg" alt="Menú del día temporalmente no disponible">
+        <div class="menu-waiting-actions">
+          <span>Consulta el menú de hoy</span>
+          <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
       </div>`;
   }
 }
