@@ -18,7 +18,7 @@
     body.public-site header,body.public-site main,body.public-site footer{display:block;visibility:visible;opacity:1;}
     body.public-site .public-topbar{background:#fffaf4;}
   </style>
-<link href="/styles.css?v=20260805-public-v43" rel="stylesheet">
+<link href="/styles.css?v=20260809-public-v49" rel="stylesheet">
 </link></head>
 
 
@@ -52,27 +52,30 @@
 
 <main>
 
-<section class="hero hero-photo editorial-hero public-hero" id="inicio">
-<div class="container hero-content hero-editorial-grid">
-<div class="hero-copy">
-<div class="kicker">Desde 2013 · Costanera Norte 1012 · Laja</div>
-<img src="/assets/logo-blanco.png">
-
-<div class="hero-actions">
-<a class="btn btn-primary" href="#banqueteria">Cotiza tu evento</a>
-<a class="btn btn-secondary hero-secondary" href="#restaurant">Ver menú del día</a>
-</div>
-</div>
-<div aria-label="Imágenes destacadas de CM" class="hero-photo-collage hero-photo-collage-equal" id="servicios">
-<a class="hero-collage-card" href="#banqueteria">
-<img alt="Salón de CM montado para evento de banquetería" src="/assets/web/B4_banqueteria_montaje_calido.jpg"/>
-<span>Banquetería</span>
-</a>
-<a class="hero-collage-card" href="#restaurant">
-<img alt="Salón de CM Restaurant para almuerzos diarios" src="/assets/almuerzo.png"/>
-<span>Restaurant</span>
-</a>
-</div>
+<section class="hero hero-photo editorial-hero public-hero hero-v49" id="inicio">
+<div class="container hero-v49-grid">
+  <div class="hero-logo-stage" aria-label="CM Banquetería y Restaurant">
+    <img class="hero-main-logo" src="/assets/logo-blanco.png" alt="CM Banquetería y Restaurant"/>
+  </div>
+  <div class="hero-services-stage">
+    <div class="kicker hero-services-kicker">Desde 2013 · Costanera Norte 1012 · Laja</div>
+    <div aria-label="Servicios destacados de CM" class="hero-photo-collage hero-photo-collage-equal hero-services-collage" id="servicios">
+      <div class="hero-service-card">
+        <a class="hero-collage-card" href="#banqueteria">
+          <img alt="Salón de CM montado para evento de banquetería" src="/assets/web/B4_banqueteria_montaje_calido.jpg"/>
+          <span>Banquetería</span>
+        </a>
+        <a class="btn btn-primary hero-service-action" href="#cotiza">Cotiza tu evento</a>
+      </div>
+      <div class="hero-service-card">
+        <a class="hero-collage-card" href="#restaurant">
+          <img alt="Salón de CM Restaurant para almuerzos diarios" src="/assets/almuerzo.png"/>
+          <span>Restaurant</span>
+        </a>
+        <a class="btn btn-secondary hero-service-action" href="#restaurant">Ver menú del día</a>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -90,9 +93,10 @@
         </div>
         </div>
         <div aria-live="polite" class="menu-card-public restaurant-menu-panel" id="menu-del-dia">
-        <p class="muted">Cargando menú...</p>
-        <img class="muted" src="/assets/web/R5_restaurant_salon_calido_hero.jpg"/>
-
+          <div class="menu-waiting menu-waiting-photo">
+            <img class="menu-waiting-image" src="/assets/web/R5_restaurant_salon_calido_hero.jpg" alt="Salón de CM Restaurant mientras se prepara el menú del día"/>
+            <div class="menu-waiting-actions"><span>Menú en preparación</span></div>
+          </div>
         </div>
         </div>
 </section>
@@ -241,7 +245,7 @@
 <span aria-hidden="true" class="material-symbols-rounded">call</span>
 <span><strong>+56 9 8774 1182</strong><small>Teléfono y WhatsApp</small></span>
 </a>
-<a class="footer-clean-item" href="mailto:claudiamendezbanqueteria@gmail.com?subject=Consulta%20desde%20cmbanqueteria.cl">
+<a class="footer-clean-item footer-email-item" href="mailto:claudiamendezbanqueteria@gmail.com?subject=Consulta%20desde%20cmbanqueteria.cl">
 <span aria-hidden="true" class="material-symbols-rounded">mail</span>
 <span><strong>claudiamendezbanqueteria@gmail.com</strong><small>Consultas y cotizaciones</small></span>
 </a>
@@ -259,8 +263,8 @@
 </footer>
 
 
-<script src="/config.js?v=20260805-public-v43"></script>
-<script src="/menu-graphic.js?v=20260805-public-v43"></script>
-<script src="/public.js?v=20260805-public-v43"></script>
+<script src="/config.js?v=20260809-public-v49"></script>
+<script src="/menu-graphic.js?v=20260809-public-v49"></script>
+<script src="/public.js?v=20260809-public-v49"></script>
 </body>
 </html>

@@ -28,17 +28,15 @@ function cmEmailUrl(payload){
 async function loadTodayMenu(){
   const box=document.querySelector('#todayMenu, #menu-del-dia');
   if(!box)return;
+  const waiting=(alt='Salón de CM Restaurant mientras se prepara el menú del día')=>`
+    <div class="menu-waiting menu-waiting-photo">
+      <img class="menu-waiting-image" src="/assets/web/R5_restaurant_salon_calido_hero.jpg" alt="${alt}">
+      <div class="menu-waiting-actions"><span>Menú en preparación</span></div>
+    </div>`;
   try{
     const res=await fetch(cmApiUrl('/api/public/menu/today'), {credentials: CM_API_BASE ? 'omit' : 'same-origin'}),data=await res.json();
     if(!data.menu){
-      box.innerHTML=`
-        <div class="menu-waiting">
-          <img class="menu-waiting-image" src="/assets/menu-espera.jpg" alt="Menú del día en preparación; se publicará aquí cuando esté disponible">
-          <div class="menu-waiting-actions">
-            <span>Menú en preparación</span>
-            <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-          </div>
-        </div>`;
+      box.innerHTML=waiting();
       return;
     }
     const menu=data.menu;
@@ -48,14 +46,7 @@ async function loadTodayMenu(){
     image.src=landscape.toDataURL('image/png');image.alt=`Menú de CM Restaurant para ${CMMenuGraphic.dateLabel(menu.menu_date)}`;image.className='public-menu-image';
     picture.append(source,image);box.innerHTML='<span class="badge green">Menú publicado para hoy</span>';box.appendChild(picture);
   }catch(e){
-    box.innerHTML=`
-      <div class="menu-waiting">
-        <img class="menu-waiting-image" src="/assets/menu-espera.jpg" alt="Menú del día temporalmente no disponible">
-        <div class="menu-waiting-actions">
-          <span>Consulta el menú de hoy</span>
-          <a class="btn btn-primary" href="${cmWhatsappUrl('Hola CM, quiero consultar por el menú del día del Restaurant.')}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-        </div>
-      </div>`;
+    box.innerHTML=waiting('Salón de CM Restaurant; el menú del día se publicará aquí cuando esté disponible');
   }
 }
 
@@ -179,7 +170,7 @@ function cmDecoratePublicActions(root=document){
     el.setAttribute('aria-label',label);
     el.setAttribute('title',label);
     el.classList.add('uses-strategic-icon',`action-${action.type}`);
-    const keepText=el.closest('.hero-actions') && !['whatsapp','mail','call','instagram'].includes(action.type);
+    const keepText=(el.closest('.hero-actions') || el.closest('.hero-service-card')) && !['whatsapp','mail','call','instagram'].includes(action.type);
     if(keepText){
       if(!el.querySelector('.material-symbols-rounded,.brand-icon-img')){
         if(action.type==='whatsapp') el.insertAdjacentHTML('afterbegin',`<img class="brand-icon-img whatsapp-brand" src="${CM_WA_ICON_SRC}" alt="" aria-hidden="true">`);
